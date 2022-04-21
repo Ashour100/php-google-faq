@@ -62,8 +62,11 @@
     <body>
         <?php
             foreach($data as $content){
+                $tempAns=explode(".", $content['risposta'] );
                 echo "<h1>" . $content['domanda'] . "</h1>";
-                echo "<p>" . $content['risposta'] . "</p>";
+                foreach($tempAns as $sentence){
+                    echo "<p>" . $sentence . ".</p>";
+                }
             }
         ?>
     </body>
